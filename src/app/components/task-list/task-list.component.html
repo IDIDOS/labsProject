@@ -1,0 +1,7 @@
+<div class="wrapper-task-list">
+    @for (id of stepArrLength; track $index) {
+    <button class="task-card" mat-raised-button (click)="onRedirectToStep(id)" color="primary">
+        <h2>Step {{id}}</h2>
+    </button>
+    }
+</div>

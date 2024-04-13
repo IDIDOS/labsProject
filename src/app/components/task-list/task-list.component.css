@@ -1,0 +1,12 @@
+.wrapper-task-list{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.task-card{
+    width:50%;
+    height: 50px;
+} 

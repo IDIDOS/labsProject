@@ -1,0 +1,27 @@
+<ng-template #loader>
+    <mat-progress-spinner></mat-progress-spinner>
+</ng-template>
+<div class="wrapper-step">
+    <app-header></app-header>
+    <main class="main">
+        <ng-container *ngIf="step,else loader">
+            <div class="wrapper-screenshot">
+                <h2>{{step.step | uppercase}}</h2>
+                <hr>
+                @for (screen of step.screens; track $index) {
+                <img [src]="screen">
+                <hr>
+                }
+                @if (!isLastStep) {
+                <button mat-raised-button color="primary" (click)="redirectToNextStep()">Next step</button>
+                }
+                @else {
+                <button mat-raised-button color="accent" (click)="redirectToHome()">Home page</button>
+                }
+
+            </div>
+
+        </ng-container>
+    </main>
+    <app-footer></app-footer>
+</div>
